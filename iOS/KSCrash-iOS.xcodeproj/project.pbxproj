@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */; };
+		71FA64CB1C76119E00D94D75 /* KSCrashReportSinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */; };
+		71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; };
+		71FA64CF1C76124C00D94D75 /* KSCrashInstallationPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */; };
 		CB02647F17F7CEC5003E0AED /* KSMach_Arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = CB02647E17F7CEC5003E0AED /* KSMach_Arm64.c */; };
 		CB02648017F7CEC5003E0AED /* KSMach_Arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = CB02647E17F7CEC5003E0AED /* KSMach_Arm64.c */; };
 		CB02648117F8D853003E0AED /* KSCrashSentry_CPPException.mm in Sources */ = {isa = PBXBuildFile; fileRef = CBF53D4F17EB765C0056DA83 /* KSCrashSentry_CPPException.mm */; };
@@ -364,6 +368,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSCrashReportSinkPost.h; path = ../../Source/KSCrash/Reporting/Sinks/KSCrashReportSinkPost.h; sourceTree = "<group>"; };
+		71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSCrashReportSinkPost.m; path = ../../Source/KSCrash/Reporting/Sinks/KSCrashReportSinkPost.m; sourceTree = "<group>"; };
+		71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSCrashInstallationPost.h; path = ../../Source/KSCrash/Installations/KSCrashInstallationPost.h; sourceTree = "<group>"; };
+		71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSCrashInstallationPost.m; path = ../../Source/KSCrash/Installations/KSCrashInstallationPost.m; sourceTree = "<group>"; };
 		CB02647E17F7CEC5003E0AED /* KSMach_Arm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = KSMach_Arm64.c; path = ../../Source/KSCrash/Recording/Tools/KSMach_Arm64.c; sourceTree = "<group>"; };
 		CB02648317FA5B12003E0AED /* Container+DeepSearch_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Container+DeepSearch_Tests.m"; path = "../../Source/KSCrash-Tests/Container+DeepSearch_Tests.m"; sourceTree = "<group>"; };
 		CB02648417FA5B12003E0AED /* FileBasedTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileBasedTestCase.h; path = "../../Source/KSCrash-Tests/FileBasedTestCase.h"; sourceTree = "<group>"; };
@@ -866,6 +874,8 @@
 				CBF53D2D17EB765C0056DA83 /* KSCrashInstallationStandard.m */,
 				CBF53D2E17EB765C0056DA83 /* KSCrashInstallationVictory.h */,
 				CBF53D2F17EB765C0056DA83 /* KSCrashInstallationVictory.m */,
+				71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */,
+				71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */,
 			);
 			name = Installation;
 			sourceTree = "<group>";
@@ -1008,6 +1018,8 @@
 				CBF53D4817EB765C0056DA83 /* KSCrashReportSinkStandard.m */,
 				CBF53D4917EB765C0056DA83 /* KSCrashReportSinkVictory.h */,
 				CBF53D4A17EB765C0056DA83 /* KSCrashReportSinkVictory.m */,
+				71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */,
+				71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */,
 			);
 			name = Sinks;
 			sourceTree = "<group>";
@@ -1042,6 +1054,7 @@
 				CBF53DE417EB765C0056DA83 /* KSCrashReportStore.h in Headers */,
 				CBF53DE717EB765C0056DA83 /* KSCrashReportWriter.h in Headers */,
 				DCA19E2C18817AD100DCA792 /* KSCrashReportFilterAlert.h in Headers */,
+				71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */,
 				DCA19E2F18817BA200DCA792 /* KSCrashReportFilterSets.h in Headers */,
 				CBC43F241C5AF2B10083A11B /* llvm-config.h in Headers */,
 				CBF53E0317EB765C0056DA83 /* KSCrashType.h in Headers */,
@@ -1072,6 +1085,7 @@
 				CBC43F1E1C5AF2B10083A11B /* None.h in Headers */,
 				CBF53E3717EB765C0056DA83 /* KSSystemInfo.h in Headers */,
 				CBC43F201C5AF2B10083A11B /* Optional.h in Headers */,
+				71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */,
 				CBF53D9717EB765C0056DA83 /* KSArchSpecific.h in Headers */,
 				CBF53DAF17EB765C0056DA83 /* KSCrashInstallation+Private.h in Headers */,
 				CBF53DEB17EB765C0056DA83 /* KSCrashSentry_Deadlock.h in Headers */,
@@ -1366,6 +1380,7 @@
 				CBF53D9917EB765C0056DA83 /* KSBacktrace.c in Sources */,
 				CBF53E4017EB765C0056DA83 /* NSData+GZip.m in Sources */,
 				CB02648117F8D853003E0AED /* KSCrashSentry_CPPException.mm in Sources */,
+				71FA64CF1C76124C00D94D75 /* KSCrashInstallationPost.m in Sources */,
 				CBF53DD317EB765C0056DA83 /* KSCrashReportFilterSets.m in Sources */,
 				CBC43F431C5BE9670083A11B /* NSString+Demangle.mm in Sources */,
 				CBF53E0B17EB765C0056DA83 /* KSHTTPMultipartPostBody.m in Sources */,
@@ -1401,6 +1416,7 @@
 				CBF53E2B17EB765C0056DA83 /* KSSafeCollections.m in Sources */,
 				CB7A6C8F17FB96E800997792 /* KSDynamicLinker.c in Sources */,
 				CBF53E4917EB765C0056DA83 /* NSMutableData+AppendUTF8.m in Sources */,
+				71FA64CB1C76119E00D94D75 /* KSCrashReportSinkPost.m in Sources */,
 				CBF53DE217EB765C0056DA83 /* KSCrashReportSinkVictory.m in Sources */,
 				CBF53E3417EB765C0056DA83 /* KSSysCtl.c in Sources */,
 				CBF53E4317EB765C0056DA83 /* NSDictionary+Merge.m in Sources */,
@@ -1615,6 +1631,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -1672,16 +1689,20 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};
 		CB6D131C17EB743A00BC2C04 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
@@ -1692,13 +1713,14 @@
 				INFOPLIST_FILE = "KSCrash/KSCrash-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.stenerud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				VALID_ARCHS = "$(inherited)";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1706,23 +1728,27 @@
 		CB6D131D17EB743A00BC2C04 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
 				DEAD_CODE_STRIPPING = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
 				INFOPLIST_FILE = "KSCrash/KSCrash-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = mh_object;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.stenerud.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				VALID_ARCHS = "$(inherited)";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
