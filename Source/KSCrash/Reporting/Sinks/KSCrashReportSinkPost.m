@@ -118,12 +118,25 @@
                                                        timeoutInterval:15];
     KSHTTPMultipartPostBody* body = [KSHTTPMultipartPostBody body];
     
-
+    NSData* jsonData = [KSJSONCodec encode:reports
+                                   options:KSJSONEncodeOptionSorted
+                                     error:&error];
+    if(jsonData == nil)
+    {
+        kscrash_i_callCompletion(onCompletion, reports, NO, error);
+        return;
+    }
+    
+    [body appendData:[jsonData gzippedWithCompressionLevel:-1 error:nil]
+                name:@"reports"
+         contentType:@"application/x-www-form-urlencoded"
+            filename:@"reports.zip"];
+    
     // POST http request
     // Content-Type: multipart/form-data; boundary=xxx
     // Content-Encoding: gzip
     request.HTTPMethod = @"POST";
-    request.HTTPBody = [[body data] gzippedWithCompressionLevel:-1 error:nil];
+    request.HTTPBody = [body data];
     [request setValue:body.contentType forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [request setValue:@"KSCrashReporter" forHTTPHeaderField:@"User-Agent"];
@@ -136,6 +149,8 @@
         [[KSHTTPRequestSender sender] sendRequest:request
                                         onSuccess:^(__unused NSHTTPURLResponse* response, __unused NSData* data)
          {
+             NSString* text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+             NSLog(text);
              kscrash_i_callCompletion(onCompletion, reports, YES, nil);
          } onFailure:^(NSHTTPURLResponse* response, NSData* data)
          {

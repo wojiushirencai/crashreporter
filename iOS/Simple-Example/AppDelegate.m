@@ -67,13 +67,13 @@ didFinishLaunchingWithOptions:(__unused NSDictionary *) launchOptions
 
 - (KSCrashInstallation*) makePostInstallation
 {
-    NSString *strurl = [NSString stringWithFormat:@"http://112.74.74.97/api/log/crash?device=%@&memberId=%@",@"iOS",@"8af49d0c516c123001516c1c5b940000"];
+    NSString *strurl = [NSString stringWithFormat:@"http://112.74.74.97/api/log/crash?device=%@&memberId=%@",@"iOS",@"297efa124f6d016e014f6d06341e0000"];
     NSURL* url = [NSURL URLWithString:strurl];
     
     KSCrashInstallationPost* victory = [KSCrashInstallationPost sharedInstance];
     victory.url = url;
-    victory.userUserId = @"8af49d0c516c123001516c1c5b940000";
-    victory.userToken = @"G5GQTYH8onc+oUboZ6Ob/hY4l3wbxbaHPqWWOae3ZswpUlDKTUNKUTtN4enUAABycatgWj1PhlSfXrvzKFTkShlZdIvGI1ZqEm6pRmlOIWeTPFoPGgVyOwfnxR2NQ5ibYZgh5XKVdWw=";
+    victory.userUserId = @"297efa124f6d016e014f6d06341e0000";
+    victory.userToken = @"UWQ5+KiLsKal5ISdD5XkSoeJvHfflqPWfJ0R3EAGfB97CBhgz/WlGdJEh8aoKdd0lw7qxcCDuiDrD83dhSC3NaoSxTtohiXfDZY+GjVRxXyJe4KvjsHTZh4HRCan7Scxn+FFEd+FMB4=";
     
     return victory;
 }
