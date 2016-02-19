@@ -36,7 +36,7 @@
 IMPLEMENT_EXCLUSIVE_SHARED_INSTANCE(KSCrashInstallationPost)
 
 @synthesize url = _url;
-@synthesize userName = _userName;
+@synthesize userToken = _userToken;
 @synthesize userUserId = _userUserId;
 
 - (id) init
@@ -51,7 +51,7 @@ IMPLEMENT_EXCLUSIVE_SHARED_INSTANCE(KSCrashInstallationPost)
 
 - (id<KSCrashReportFilter>) sink
 {
-    KSCrashReportSinkPost* sink = [KSCrashReportSinkPost sinkWithURL:self.url userName:self.userName userUserId:self.userUserId];
+    KSCrashReportSinkPost* sink = [KSCrashReportSinkPost sinkWithURL:self.url userToken:self.userToken userUserId:self.userUserId];
     return [KSCrashReportFilterPipeline filterWithFilters:[sink defaultCrashReportFilterSet], nil];
 }
 

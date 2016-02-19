@@ -10,7 +10,7 @@
 #import <KSCrash/KSCrashInstallationQuincyHockey.h>
 #import <KSCrash/KSCrashInstallationEmail.h>
 #import <KSCrash/KSCrashInstallationVictory.h>
-
+#import <KSCrash/KSCrashInstallationPost.h>
 
 /* Very basic crash reporting example.
  *
@@ -37,7 +37,7 @@ didFinishLaunchingWithOptions:(__unused NSDictionary *) launchOptions
 {
     // Create an installation (choose one)
 //    KSCrashInstallation* installation = [self makeStandardInstallation];
-    KSCrashInstallation* installation = [self makeEmailInstallation];
+    KSCrashInstallation* installation = [self makePostInstallation];
 //    KSCrashInstallation* installation = [self makeHockeyInstallation];
 //    KSCrashInstallation* installation = [self makeQuincyInstallation];
 //    KSCrashInstallation *installation = [self makeVictoryInstallation];
@@ -63,6 +63,19 @@ didFinishLaunchingWithOptions:(__unused NSDictionary *) launchOptions
              NSLog(@"Failed to send reports: %@", error);
          }
      }];
+}
+
+- (KSCrashInstallation*) makePostInstallation
+{
+    NSString *strurl = [NSString stringWithFormat:@"http://112.74.74.97/api/log/crash?device=%@&memberId=%@",@"iOS",@"8af49d0c516c123001516c1c5b940000"];
+    NSURL* url = [NSURL URLWithString:strurl];
+    
+    KSCrashInstallationPost* victory = [KSCrashInstallationPost sharedInstance];
+    victory.url = url;
+    victory.userUserId = @"8af49d0c516c123001516c1c5b940000";
+    victory.userToken = @"G5GQTYH8onc+oUboZ6Ob/hY4l3wbxbaHPqWWOae3ZswpUlDKTUNKUTtN4enUAABycatgWj1PhlSfXrvzKFTkShlZdIvGI1ZqEm6pRmlOIWeTPFoPGgVyOwfnxR2NQ5ibYZgh5XKVdWw=";
+    
+    return victory;
 }
 
 - (KSCrashInstallation*) makeEmailInstallation

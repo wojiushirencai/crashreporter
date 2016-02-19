@@ -45,7 +45,7 @@
 @interface KSCrashReportSinkPost ()
 
 @property(nonatomic,readwrite,retain) NSURL* url;
-@property(nonatomic,readwrite,retain) NSString* userName;
+@property(nonatomic,readwrite,retain) NSString* userToken;
 @property(nonatomic,readwrite,retain) NSString* userUserId;
 
 @property(nonatomic,readwrite,retain) KSReachableOperationKSCrash* reachableOperation;
@@ -57,33 +57,33 @@
 @implementation KSCrashReportSinkPost
 
 @synthesize url = _url;
-@synthesize userName = _userName;
+@synthesize userToken = _userToken;
 @synthesize userUserId = _userUserId;
 @synthesize reachableOperation = _reachableOperation;
 
 + (KSCrashReportSinkPost*) sinkWithURL:(NSURL*) url
-                                   userName:(NSString*) userName
+                                   userToken:(NSString*) userToken
                                   userUserId:(NSString*) userUserId
 {
-    return [[self alloc] initWithURL:url userName:userName userEmail:userUserId];
+    return [[self alloc] initWithURL:url userToken:userToken userUserId:userUserId];
 }
 
 - (id) initWithURL:(NSURL*) url
-          userName:(NSString*) userName
+          userToken:(NSString*) userToken
          userUserId:(NSString*) userUserId
 {
     if((self = [super init]))
     {
         self.url = url;
-        if (userName == nil || [userName length] == 0) {
+        if (userToken == nil || [userToken length] == 0) {
 #ifdef __IPHONE_OS_VERSION_MAX_ALLOWED
-            self.userName = UIDevice.currentDevice.name;
+            self.userToken = UIDevice.currentDevice.name;
 #else
-            self.userName = @"unknown";
+            self.userToken = @"unknown";
 #endif
         }
         else {
-            self.userName = userName;
+            self.userToken = userToken;
         }
         self.userUserId = userUserId;
     }
@@ -103,12 +103,12 @@
         NSDictionary *userDict = [report objectForKey:@"user"];
         if (userDict) {
             // user member is exist
-            [userDict setValue:self.userName forKey:@"name"];
+            [userDict setValue:self.userToken forKey:@"name"];
             [userDict setValue:self.userUserId forKey:@"email"];
         }
         else {
             // no user member, append user dictionary
-            [report setValue:@{@"name": self.userName, @"email": self.userUserId} forKey:@"user"];
+            [report setValue:@{@"name": self.userToken, @"email": self.userUserId} forKey:@"user"];
         }
     }
     
@@ -117,19 +117,7 @@
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                                        timeoutInterval:15];
     KSHTTPMultipartPostBody* body = [KSHTTPMultipartPostBody body];
-    NSData* jsonData = [KSJSONCodec encode:reports
-                                   options:KSJSONEncodeOptionSorted
-                                     error:&error];
-    if(jsonData == nil)
-    {
-        kscrash_i_callCompletion(onCompletion, reports, NO, error);
-        return;
-    }
     
-    [body appendData:jsonData
-                name:@"reports"
-         contentType:@"application/json"
-            filename:@"reports.json"];
 
     // POST http request
     // Content-Type: multipart/form-data; boundary=xxx
@@ -139,7 +127,8 @@
     [request setValue:body.contentType forHTTPHeaderField:@"Content-Type"];
     [request setValue:@"gzip" forHTTPHeaderField:@"Content-Encoding"];
     [request setValue:@"KSCrashReporter" forHTTPHeaderField:@"User-Agent"];
-
+    [request setValue:self.userUserId forHTTPHeaderField:@"userId"];
+    [request setValue:self.userToken forHTTPHeaderField:@"token"];
     self.reachableOperation = [KSReachableOperationKSCrash operationWithHost:[self.url host]
                                                                    allowWWAN:YES
                                                                        block:^

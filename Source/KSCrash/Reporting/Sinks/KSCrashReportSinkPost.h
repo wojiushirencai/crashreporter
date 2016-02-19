@@ -43,7 +43,7 @@
  * @param userUserId The user ID of crash information *optional
  */
 + (KSCrashReportSinkPost*) sinkWithURL:(NSURL*) url
-                                   userName:(NSString*) userName
+                                   userToken:(NSString*) userToken
                                   userUserId:(NSString*) userUserId;;
 
 /** Constructor.
@@ -53,7 +53,7 @@
  * @param userUserId The user Id of crash information *optional
  */
 - (id) initWithURL:(NSURL*) url
-          userName:(NSString*) userName
+          userToken:(NSString*) userToken
          userUserId:(NSString*) userUserId;
 
 - (id <KSCrashReportFilter>) defaultCrashReportFilterSet;

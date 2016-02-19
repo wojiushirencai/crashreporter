@@ -1,4 +1,5 @@
 build/*
+iOS/build/*
 KSCrash/build/*
 *.pbxuser
 !default.pbxuser
@@ -20,3 +21,6 @@ Thumbs.db
 .~*
 *.orig
 *.xccheckout
+*.a
+*.o
+*.build

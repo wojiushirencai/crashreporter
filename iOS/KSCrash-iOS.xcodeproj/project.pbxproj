@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222269B41C76C5B90050B9AE /* KSCrashReportSinkPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		222269B51C76C5B90050B9AE /* KSCrashReportSinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */; };
+		222269B61C76C5BD0050B9AE /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		222269B71C76C5BD0050B9AE /* KSCrashInstallationPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */; };
 		71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */; };
 		71FA64CB1C76119E00D94D75 /* KSCrashReportSinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */; };
 		71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; };
@@ -1142,10 +1146,12 @@
 				CBF53E8017EB7EA80056DA83 /* KSCrashReportSinkConsole.h in Headers */,
 				CBF53E8117EB7EA80056DA83 /* KSCrashReportSinkEMail.h in Headers */,
 				CBF53E8217EB7EA80056DA83 /* KSCrashReportSinkQuincyHockey.h in Headers */,
+				222269B61C76C5BD0050B9AE /* KSCrashInstallationPost.h in Headers */,
 				CB42F4551C6D180F002FD017 /* DemangleNodes.h in Headers */,
 				CBF53E8317EB7EA80056DA83 /* KSCrashReportSinkStandard.h in Headers */,
 				CBF53E8417EB7EA80056DA83 /* KSCrashReportSinkVictory.h in Headers */,
 				CBF53E8617EB7EA80056DA83 /* KSCrashReportStore.h in Headers */,
+				222269B41C76C5B90050B9AE /* KSCrashReportSinkPost.h in Headers */,
 				CBF53E5A17EB7EA80056DA83 /* KSCrashReportWriter.h in Headers */,
 				DCA19E2D18817AD100DCA792 /* KSCrashReportFilterAlert.h in Headers */,
 				DCA19E3018817BA200DCA792 /* KSCrashReportFilterSets.h in Headers */,
@@ -1433,6 +1439,7 @@
 			files = (
 				CBF53E2917EB765C0056DA83 /* KSReachabilityKSCrash.m in Sources */,
 				CBF53E4417EB765C0056DA83 /* NSDictionary+Merge.m in Sources */,
+				222269B51C76C5B90050B9AE /* KSCrashReportSinkPost.m in Sources */,
 				CB6D132E17EB749A00BC2C04 /* KSCrashLib.m in Sources */,
 				CBF53DE317EB765C0056DA83 /* KSCrashReportSinkVictory.m in Sources */,
 				CBF53DC217EB765C0056DA83 /* KSCrashReportFilter.m in Sources */,
@@ -1495,6 +1502,7 @@
 				CBF53E1817EB765C0056DA83 /* KSLogger.m in Sources */,
 				CBF53DE017EB765C0056DA83 /* KSCrashReportSinkStandard.m in Sources */,
 				CBF53DE617EB765C0056DA83 /* KSCrashReportStore.m in Sources */,
+				222269B71C76C5BD0050B9AE /* KSCrashInstallationPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
