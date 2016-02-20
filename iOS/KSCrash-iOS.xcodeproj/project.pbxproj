@@ -11,9 +11,9 @@
 		222269B51C76C5B90050B9AE /* KSCrashReportSinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */; };
 		222269B61C76C5BD0050B9AE /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		222269B71C76C5BD0050B9AE /* KSCrashInstallationPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */; };
-		71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */; };
+		71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64C81C76119E00D94D75 /* KSCrashReportSinkPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71FA64CB1C76119E00D94D75 /* KSCrashReportSinkPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64C91C76119E00D94D75 /* KSCrashReportSinkPost.m */; };
-		71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; };
+		71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FA64CC1C76124C00D94D75 /* KSCrashInstallationPost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71FA64CF1C76124C00D94D75 /* KSCrashInstallationPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FA64CD1C76124C00D94D75 /* KSCrashInstallationPost.m */; };
 		CB02647F17F7CEC5003E0AED /* KSMach_Arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = CB02647E17F7CEC5003E0AED /* KSMach_Arm64.c */; };
 		CB02648017F7CEC5003E0AED /* KSMach_Arm64.c in Sources */ = {isa = PBXBuildFile; fileRef = CB02647E17F7CEC5003E0AED /* KSMach_Arm64.c */; };
@@ -1050,6 +1050,8 @@
 				CBF53DCC17EB765C0056DA83 /* KSCrashReportFilterGZip.h in Headers */,
 				CBF53DCF17EB765C0056DA83 /* KSCrashReportFilterJSON.h in Headers */,
 				CBF53DD517EB765C0056DA83 /* KSCrashReportSinkConsole.h in Headers */,
+				71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */,
+				71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */,
 				CBF53DD817EB765C0056DA83 /* KSCrashReportSinkEMail.h in Headers */,
 				CBF53DDB17EB765C0056DA83 /* KSCrashReportSinkQuincyHockey.h in Headers */,
 				CB42F4561C6D1813002FD017 /* DemangleNodes.h in Headers */,
@@ -1058,7 +1060,6 @@
 				CBF53DE417EB765C0056DA83 /* KSCrashReportStore.h in Headers */,
 				CBF53DE717EB765C0056DA83 /* KSCrashReportWriter.h in Headers */,
 				DCA19E2C18817AD100DCA792 /* KSCrashReportFilterAlert.h in Headers */,
-				71FA64CE1C76124C00D94D75 /* KSCrashInstallationPost.h in Headers */,
 				DCA19E2F18817BA200DCA792 /* KSCrashReportFilterSets.h in Headers */,
 				CBC43F241C5AF2B10083A11B /* llvm-config.h in Headers */,
 				CBF53E0317EB765C0056DA83 /* KSCrashType.h in Headers */,
@@ -1089,7 +1090,6 @@
 				CBC43F1E1C5AF2B10083A11B /* None.h in Headers */,
 				CBF53E3717EB765C0056DA83 /* KSSystemInfo.h in Headers */,
 				CBC43F201C5AF2B10083A11B /* Optional.h in Headers */,
-				71FA64CA1C76119E00D94D75 /* KSCrashReportSinkPost.h in Headers */,
 				CBF53D9717EB765C0056DA83 /* KSArchSpecific.h in Headers */,
 				CBF53DAF17EB765C0056DA83 /* KSCrashInstallation+Private.h in Headers */,
 				CBF53DEB17EB765C0056DA83 /* KSCrashSentry_Deadlock.h in Headers */,
